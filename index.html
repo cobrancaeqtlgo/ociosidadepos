@@ -185,28 +185,82 @@ var o=[];var l=Array.isArray(e);for(f=n.s.c;f<=n.e.c;++f)s[f]=ya(f);for(var c=n.
 <div id="tab-analise" class="tab active">
   <div class="tab-fixed">
   <div class="fbar">
-    <span class="flbl">Mês</span><div id="meses-analise" style="display:flex;gap:5px;flex-wrap:wrap"><button class="mbtn" data-mes="2026-01">Jan/26</button><button class="mbtn" data-mes="2026-02">Fev/26</button><button class="mbtn" data-mes="2026-03">Mar/26</button><button class="mbtn" data-mes="2026-04">Abr/26</button><button class="mbtn" data-mes="2026-05">Mai/26</button><button class="mbtn" data-mes="2026-06">Jun/26</button><button class="mbtn" data-mes="2026-07">Jul/26</button><button class="mbtn" data-mes="2026-08">Ago/26</button><button class="mbtn active" data-mes="2026-09">Set/26</button></div></br>
+    <span class="flbl">Mês</span>
+    <div id="meses-analise" style="display:flex;gap:5px;flex-wrap:wrap">
+      <button class="mbtn" data-mes="2026-01">Jan/26</button>
+      <button class="mbtn" data-mes="2026-02">Fev/26</button>
+      <button class="mbtn" data-mes="2026-03">Mar/26</button>
+      <button class="mbtn" data-mes="2026-04">Abr/26</button>
+      <button class="mbtn" data-mes="2026-05">Mai/26</button>
+      <button class="mbtn" data-mes="2026-06">Jun/26</button>
+      <button class="mbtn" data-mes="2026-07">Jul/26</button>
+      <button class="mbtn" data-mes="2026-08">Ago/26</button>
+      <button class="mbtn active" data-mes="2026-09">Set/26</button>
+    </div>
+    <p></p>
     <div class="fgrp"><span class="flbl">Sup.</span>
-      <select id="fa-super" onchange="mudaSuperAnalise()"><option value="">Todas</option><option value="CT - CENTRO">CT - CENTRO</option><option value="NDT - NORDESTE">NDT - NORDESTE</option><option value="NT - NORTE">NT - NORTE</option><option value="S - SUL">S - SUL</option><option value="SDT - SUDOESTE">SDT - SUDOESTE</option></select></div>
+      <select id="fa-super" onchange="mudaSuperAnalise()">
+        <option value="">Todas</option>
+        <option value="CT - CENTRO">CT - CENTRO</option>
+        <option value="NDT - NORDESTE">NDT - NORDESTE</option>
+        <option value="NT - NORTE">NT - NORTE</option>
+        <option value="S - SUL">S - SUL</option>
+        <option value="SDT - SUDOESTE">SDT - SUDOESTE</option>
+      </select>
+    </div>
     <div class="fgrp"><span class="flbl">Regional</span>
-      <select id="fa-reg" onchange="renderAnalise()"><option value="">Todas</option><option value="ANA - ANAPOLIS">ANA - ANAPOLIS</option><option value="FOR - FORMOSA">FOR - FORMOSA</option><option value="GYN - GOIANIA">GYN - GOIANIA</option><option value="IPO - IPORA">IPO - IPORA</option><option value="LUZ - LUZIANIA">LUZ - LUZIANIA</option><option value="MBL - MONTES BELOS">MBL - MONTES BELOS</option><option value="MET - METROPOLITANA">MET - METROPOLITANA</option><option value="MOR - MORRINHOS">MOR - MORRINHOS</option><option value="RIO - RIO VERDE">RIO - RIO VERDE</option><option value="URU - URUACU">URU - URUACU</option></select></div>
+      <select id="fa-reg" onchange="renderAnalise()">
+        <option value="">Todas</option>
+        <option value="ANA - ANAPOLIS">ANA - ANAPOLIS</option>
+        <option value="FOR - FORMOSA">FOR - FORMOSA</option>
+        <option value="GYN - GOIANIA">GYN - GOIANIA</option>
+        <option value="IPO - IPORA">IPO - IPORA</option>
+        <option value="LUZ - LUZIANIA">LUZ - LUZIANIA</option>
+        <option value="MBL - MONTES BELOS">MBL - MONTES BELOS</option>
+        <option value="MET - METROPOLITANA">MET - METROPOLITANA</option>
+        <option value="MOR - MORRINHOS">MOR - MORRINHOS</option>
+        <option value="RIO - RIO VERDE">RIO - RIO VERDE</option>
+        <option value="URU - URUACU">URU - URUACU</option>
+      </select>
+    </div>
     <div class="fgrp"><span class="flbl">Frente</span>
-      <select id="fa-frente" onchange="renderAnalise()"><option value="">Todas</option><option value="GARANTIA DA RECEITA">GARANTIA DA RECEITA</option><option value="GSTC">GSTC</option><option value="RELACIONAMENTO COM CLIENTE">RELACIONAMENTO COM CLIENTE</option></select></div>
+      <select id="fa-frente" onchange="renderAnalise()">
+        <option value="">Todas</option>
+        <option value="GARANTIA DA RECEITA">GARANTIA DA RECEITA</option>
+        <option value="GSTC">GSTC</option>
+        <option value="RELACIONAMENTO COM CLIENTE">RELACIONAMENTO COM CLIENTE</option>
+      </select>
+    </div>
     <div class="fgrp"><span class="flbl">Status</span>
       <select id="fa-status" onchange="renderAnalise()">
-        <option value="">Todos</option><option value="ATIVO">Ativo</option><option value="INATIVO">Inativo</option></select></div>
+        <option value="">Todos</option>
+        <option value="ATIVO">Ativo</option>
+        <option value="INATIVO">Inativo</option>
+      </select>
+    </div>
     <div class="fgrp"><span class="flbl">Torpedo</span>
       <select id="fa-torpedo" onchange="renderAnalise()">
-        <option value="">Todos</option><option value="S">Sim</option><option value="N">Não</option></select></div>
+        <option value="">Todos</option>
+        <option value="S">Sim</option>
+        <option value="N">Não</option>
+      </select>
+    </div>
     <div class="fgrp"><span class="flbl">Ciclos</span>
       <select id="fa-ciclos" onchange="renderAnalise()">
-        <option value="">Todos</option><option value="1">≥1 consec.</option><option value="2">≥2 consec.</option><option value="3">≥3 consec.</option><option value="4">≥4 consec.</option></select></div>
+        <option value="">Todos</option>
+        <option value="1">≥1 consec.</option>
+        <option value="2">≥2 consec.</option>
+        <option value="3">≥3 consec.</option>
+        <option value="4">≥4 consec.</option>
+      </select>
+    </div>
     <div class="fgrp"><span class="flbl">Ociosa</span>
       <select id="fa-ociosa" onchange="renderAnalise()">
         <option value="">Todas</option>
         <option value="S">Sim</option>
         <option value="N">Não</option>
-      </select></div>
+      </select>
+    </div>
     <button class="btn-limpar" onclick="limparFiltros('analise')">✕ Limpar Filtros</button>
   </div>
 
